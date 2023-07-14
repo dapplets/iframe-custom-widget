@@ -1,0 +1,25 @@
+{
+  "name": "iframe-custom-widget",
+  "version": "0.1.0",
+  "description": "Inject a custom widget with iframe ",
+  "main": "",
+  "scripts": {
+    "postinstall": "concurrently -c \"magenta,cyan\" -n \"dapplet,overlay\" \"npm run install:dapplet\" \"npm run install:overlay\"",
+    "install:dapplet": "cd dapplet && npm i",
+    "install:overlay": "cd overlay && npm i",
+    "start": "concurrently -c \"magenta,cyan\" -n \"dapplet,overlay\" \"npm run start:dapplet\" \"npm run start:overlay\"",
+    "start:dapplet": "cd dapplet && npm start",
+    "start:overlay": "cd overlay && npm start",
+    "prettier": "npx prettier --write ."
+  },
+  "cacheDirectories": [
+    "dapplet/node_modules",
+    "overlay/node_modules"
+  ],
+  "author": "Dapplets Project",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^6.5.1",
+    "prettier": "2.2.1"
+  }
+}

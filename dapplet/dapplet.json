@@ -1,0 +1,19 @@
+{
+  "name": { "$ref": "package.json#/name" },
+  "branch": "default",
+  "version": { "$ref": "package.json#/version" },
+  "type": "FEATURE",
+  "title": "IFrame Custom Widget",
+  "description": { "$ref": "package.json#/description" },
+  "main": { "$ref": "package.json#/main" },
+  "icon": "src/icons/no-logo.png",
+  "contextIds": [
+    "twitter-config.dapplet-base.eth"
+  ],
+  "config": {
+    "schema": "config/schema.json",
+    "default": "config/default.json"
+  },
+  "overlays": { "overlay": "https://localhost:3000" },
+  "dependencies": { "twitter-config.dapplet-base.eth": "0.1.6" }
+}
